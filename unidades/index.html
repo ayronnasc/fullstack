@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Unidades CSS</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .div-1{
+            position: relative; /*relativo ao body*/
+            margin: auto; /*
+            sera posicionado no meio por que 
+            sera automaticamente calculado pela relacao do body
+            */
+
+            width: 50%;
+            height: 200px;
+            background-color: blue;
+        }
+        .div-2{
+            position: relative; /*relativo a div-1*/
+            /*indica que seu posicionamento eh relativo ao elemento pai*/
+            left: 10px; 
+            top: 10px;
+            height: 50px;
+            width: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-1">
+        <div class="div-2"></div>
+    </div>
+    
+</body>
+</html>
