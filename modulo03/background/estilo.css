@@ -1,0 +1,21 @@
+div{
+    margin: 10px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.espaco-1{
+    background: linear-gradient(90deg,red,yellow); /*deg eh graus*/
+}
+
+.espaco-2{
+    background-image: url('images/fundo.jpg');
+    background-size: 100% 100%; /*Obrigando a ocupar 100% da altura e largura do elemento*/
+    
+
+}
+
+.espaco-3{
+    background-image: url('images/outro_fundo.jpg');
+    background-repeat: repeat-x;
+}

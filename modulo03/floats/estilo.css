@@ -1,0 +1,9 @@
+article {
+    width: 500px;
+    margin: 50px auto;
+}
+
+img {
+    float: right;
+    padding-left: 10px;
+}
