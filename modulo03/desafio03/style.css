@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(49, 212, 253),rgb(131, 51, 223),purple);
+}
+
+.container{
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 75%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    
+}
+
+.btn-close{
+    float: right;
+    
+
+}
+
+h1{
+    text-align: center;
+
+}
