@@ -166,4 +166,50 @@ label{
     font-weight: bolder;
 }
 
+#google:hover{
+    cursor: pointer;
+    
+    cursor: pointer;
+    animation-name: google;
+    animation-delay: 0.1s;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+   
+}
+
+@keyframes google {
+    from{
+        background-color: white;
+    }
+    to{
+
+        background-color: rgb(255, 68, 0);
+        color: white;
+    }
+}
+
+#facebook:hover{
+    cursor: pointer;
+    animation-name: facebook;
+    animation-delay: 0.1s;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes facebook {
+    
+    from{
+        background-color: white;
+        border: 1px solid rgb(31, 97, 229);
+        color: rgb(31, 97, 229);
+    }
+    to{
+        background-color: rgb(31, 97, 229);
+        color: white;
+    }
+
+}
+
+
+
 
