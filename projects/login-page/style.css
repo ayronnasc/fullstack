@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(to right bottom, rgb(61, 157, 217), purple);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    background-color: rgba(255, 249, 249, 0.946);
+    display: flex;
+    padding: 40px;
+}
+
+.login{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 2px rgba(164, 164, 164, 0.433);
+}
+
+.inputs{
+    display: flex;
+    flex-flow: column nowrap;
+   
+    margin-top: 35px;
+}
+
+.input-area-1{
+    
+    
+}
+
+/* ----------------------------------------------- */
+
+.input-area-2{
+    margin-top: 15px;
+
+}
+ 
+.input-area-2 > label > span{
+    float: right;
+}
+
+/* ----------------------------------------------- */
+
+label{
+    font-weight: 600;
+    color: rgb(99, 99, 99);
+}
+
+.input-area-1 input{
+    display: block;
+    padding: 10px;
+    width: 90%;
+    margin-top: 6px;
+}
+
+.input-area-2 input{
+    display: block;
+    padding: 10px;
+    width: 90%;
+    margin-top: 6px;
+}
+
+.input-area-2 > label > span > a{
+    color: rgb(164, 73, 244);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#p-login{
+
+    font-weight: 900;
+    font-size: 25px;
+    margin: 5px 0;
+    color: rgb(10, 10, 93);
+
+}
+
+#p-signup{
+    color: rgba(87, 87, 87, 0.621);
+    margin: 10px 0;
+}
+
+#p-signup a{
+    color: rgb(164, 73, 244);
+    font-weight: 900;
+}
+
+.remember-me{
+    margin: 20px 0;
+}
+
+.remember-me span{
+    color: rgba(83, 83, 83, 0.683);
+    font-size: 13px;
+    
+}
+.btn-login{
+    margin-bottom: 20px;
+}
+.btn-login input{
+     padding: 16px;
+     width: 100%;
+     border-radius: 10px;
+     border: none;
+     background-color: rgb(153, 60, 241);
+     color: white;
+     font-weight: bolder;
+     cursor: pointer;
+}
+
+.or-login-with{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.or-login-with div{
+    background-color: rgba(152, 152, 152, 0.227);
+    width: 25%;
+    height: 2px;
+}
+
+.or-login-with p{
+    color: rgba(152, 152, 152, 0.575);
+    margin: 0 5px;
+    position: relative;
+    bottom: 7px;
+    font-size: 14px;
+}
+
+.others-btn{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#google{
+    padding: 10px 40px;
+    margin: 0 10px;
+    border: 1px solid rgb(255, 68, 0);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(255, 68, 0);
+    font-weight: bolder;
+}
+
+#facebook{
+    padding: 10px 40px;
+    margin: 0 10px;
+    border: 1px solid rgb(31, 97, 229);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(31, 97, 229);
+    font-weight: bolder;
+}
+
+
