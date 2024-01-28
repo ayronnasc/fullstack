@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------ HEADER START ------------------------------ */
+
+header{
+    background-color: rgba(151, 52, 52, 0.745);
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 1.5%;
+}
+
+nav{
+    background-color: rgba(255, 7, 7, 0.628);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    overflow: auto;
+    align-items: last baseline;
+}
+
+.header-links li{
+    list-style: none;
+
+}
+
+.header-links{
+    margin: 0 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex-grow: 0.25;
+
+}
+
+.header-links li{
+   
+}
+
+.header-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.logomarca {
+       color: white;
+       font-size: 45px;
+}
+
+
+.btn-login-area{
+     padding: 10px;
+}
+
+.btn-login-area .btn-login{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    background-color: blue;
+    padding: 20px 55px;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+/* ------------------------------ HEADER END ------------------------------ */
+
+
+/* ------------------------------ CONTENT AREA START ------------------------------ */
+
+main{
+    background-color: rgba(150, 150, 0, 0.772);
+}
+
+/* ------------------------------ CONTENT AREA END  ------------------------------ */
