@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 5px;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% auto 10%;
+    
+}
+
+header{
+    background-color: rgb(63, 1, 63);
+    color: white;
+    width: 100%;
+
+    display: grid;
+    justify-items: center;
+    
+    
+}
+
+header .container{
+    display: grid;
+    width: 98%;
+    padding: 10px;
+    grid-template-columns: 50% auto;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+header .image{
+    padding: 20px;
+    background-color: blueviolet;
+}
+
+
+footer{
+    background-color: rgb(63, 1, 63);
+    color: white;
+
+    display: grid;
+    align-items: center;
+}
+
+footer p{
+    padding: 20px;
+}
+
+.container-content-main{
+
+    display: grid;
+    grid-template-columns: 82% auto;
+    
+}
+
+.content-main{
+    
+    display: grid;
+    grid-template-rows: 25% auto;
+     
+}
+
+.content-main .container-text{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.text01{ 
+    
+    padding: 20px;
+    background-color: rgb(72, 7, 134);
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.text02{
+padding: 20px;
+ background-color: blueviolet;  
+ color: white; 
+ display: grid;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.text03{
+    padding: 20px;
+    background-color: rgb(72, 51, 227);
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    background-color: rgb(72, 51, 227);
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-aside{
+    background-color: rgba(54, 67, 140, 0.975);
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size:35px;
+}
