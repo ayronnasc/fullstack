@@ -1,0 +1,19 @@
+{
+    "name": "sys4soft/bng",
+    "description": "Aplicacao para gestao de name gathering",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ayron Nascimento"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "bng\\Controllers\\":["app/controllers"]
+        },
+        "files": [
+            "app/config.php"
+        ]
+    }
+}
