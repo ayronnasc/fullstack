@@ -8,12 +8,14 @@ class ComposerStaticInit9e812f88e86f46d8ce47cd26c42c6a78
 {
     public static $files = array (
         '9792b02da3111b62997015981f2467d4' => __DIR__ . '/../..' . '/app/config.php',
+        'de6a5da1af7b3fd0462001fffaaa313e' => __DIR__ . '/../..' . '/app/helpers/Functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'b' => 
         array (
             'bng\\System\\' => 11,
+            'bng\\Models\\' => 11,
             'bng\\Controllers\\' => 16,
         ),
     );
@@ -23,6 +25,10 @@ class ComposerStaticInit9e812f88e86f46d8ce47cd26c42c6a78
         array (
             0 => __DIR__ . '/../..' . '/app/system',
         ),
+        'bng\\Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/models',
+        ),
         'bng\\Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/controllers',
@@ -31,7 +37,11 @@ class ComposerStaticInit9e812f88e86f46d8ce47cd26c42c6a78
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'bng\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
         'bng\\Controllers\\Main' => __DIR__ . '/../..' . '/app/controllers/Main.php',
+        'bng\\Models\\Agents' => __DIR__ . '/../..' . '/app/models/Agents.php',
+        'bng\\Models\\BaseModel' => __DIR__ . '/../..' . '/app/models/BaseModel.php',
+        'bng\\System\\Database' => __DIR__ . '/../..' . '/app/system/Database.php',
         'bng\\System\\Router' => __DIR__ . '/../..' . '/app/system/Router.php',
     );
 
