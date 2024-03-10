@@ -6,5 +6,64 @@ use bng\Models\BaseModel;
 
 class Agents extends BaseModel
 {
+    public function check_login($username, $password){
+        //check if the login is valid
+        $params = [ 
+            ':username' => $username
+        ];
 
+        //check if there is a user in the database
+        $this->db_connect();
+        $results = $this->query(
+            "SELECT id, AES_DECRYPT(passwrd, '". MYSQL_AES_KEY ."')passwrd FROM agents 
+             WHERE AES_ENCRYPT(:username, '". MYSQL_AES_KEY ."') = NAME"
+        , $params);
+
+        //if there is no user, returns false
+        if($results->affected_rows == 0){
+            return [ 
+                'status' => false
+            ];
+        }
+
+        // there is a user with that name (username)
+        // check if the password is correct 
+        $temp = password_hash($results->results[0]->passwrd,PASSWORD_DEFAULT);
+
+        if(!password_verify($password, $temp)){
+            return [ 
+                'status' => false
+            ];
+        }
+        
+        // login is ok
+        return [ 
+            'status' => true
+        ];
+    }
+
+    public function get_user_data($username){
+
+        // get all necessary user data to insert in the session 
+        $params = [ 
+            ':username' => $username
+        ];
+
+        $this->db_connect();
+        $results = $this->query(
+            "SELECT ". 
+            "id, ". 
+            "AES_DECRYPT(name, '" . MYSQL_AES_KEY . "') name, ". 
+            "profile ".
+            "FROM agents ".
+            "WHERE AES_ENCRYPT(:username, '" . MYSQL_AES_KEY . "') = name", 
+            $params
+        );
+        
+
+        return [ 
+            'status' => 'sucess',
+            'data' => $results->results[0]
+        ];
+    }
 }

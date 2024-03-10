@@ -39,6 +39,12 @@ class Main extends BaseController
             unset($_SESSION["validation_errors"]);
         }
         
+        //check if there was an invalid login
+        if(!empty($_SESSION["server_error"])){
+            $data["server_error"] = $_SESSION["server_error"];
+            unset($_SESSION["server_error"]);
+        }
+
         //display login form 
         $this->view('layouts/html_header');
         $this->view('login_frm', $data);
@@ -67,6 +73,26 @@ class Main extends BaseController
             $validation_erros[] = "Username e password sao obrigatorios";
         }
 
+        //get Form data
+        $username = $_POST['text_username'];
+        $password = $_POST['text_password'];
+
+        // check if is valid email 
+        if(!filter_var($username, FILTER_VALIDATE_EMAIL)){
+            $validation_erros[] = 'O username tem que ser um email valido';
+        }
+
+        // if username between 5 and 50 chars
+        if(strlen($username) < 5 || strlen($username) > 50){
+            $validation_erros[] = "O username deve ter entre 5 e 50 caracteres.";
+        }
+
+        // if password is valid
+        if(strlen($password) < 6 || strlen($password) > 12){
+            $validation_erros[] = "A senha deve ter entre 6 e 12  caracteres.";
+        }
+
+
         // check if there are validation errors 
         if(!empty($validation_erros)){
             $_SESSION["validation_errors"] = $validation_erros;
@@ -74,13 +100,28 @@ class Main extends BaseController
             return;
         }
 
-        //get Form data
-        $username = $_POST['text_username'];
-        $password = $_POST['text_password'];
+        $model = new Agents();
+        $result = $model->check_login($username, $password);
 
-        echo $username . "<br>" . $password;
+
+        if(!$result['status']){
+            // invalid login
+            $_SESSION['server_error'] = 'Login invalido';
+            $this->login_frm();
+            return;
+        }
+        
+        //load user information to the session 
+        $results = $model->get_user_data($username);
+        
+        //add user to session 
+        $_SESSION["user"] = $results['data'];
         
     }
 
     // ==============================================
 }
+
+// admin@bng.com -- Aa123456
+// agent1@bng.com -- Aa123456
+// agent2@bng.com -- Aa123456
