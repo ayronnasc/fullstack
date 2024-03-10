@@ -7,7 +7,9 @@
             "name": "Ayron Nascimento"
         }
     ],
-    "require": {},
+    "require": {
+        "monolog/monolog": "^3.5"
+    },
     "autoload": {
         "psr-4": {
             "bng\\Controllers\\":["app/controllers"],
