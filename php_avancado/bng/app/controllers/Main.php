@@ -109,12 +109,19 @@ class Main extends BaseController
 
 
         if(!$result['status']){
+
+            //logger
+            logger("$username -- login invalido", "error");
+
             // invalid login
             $_SESSION['server_error'] = 'Login invalido';
             $this->login_frm();
             return;
         }
         
+        //logger
+        logger("$username -- login com sucesso ");
+
         //load user information to the session 
         $results = $model->get_user_data($username);
         
@@ -130,6 +137,15 @@ class Main extends BaseController
     }
 
     public function logout(){
+
+        //disable direct access to logout
+        if(!check_session()){
+            $this->index();
+            return;
+        }
+
+        //logger
+        logger($_SESSION['user']->name . ' -- fez logout');
 
         //clear user from session 
         unset($_SESSION['user']);
